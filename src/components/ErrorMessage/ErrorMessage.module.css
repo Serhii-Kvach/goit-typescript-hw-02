@@ -1,0 +1,16 @@
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.errorText {
+  color: rgb(255, 0, 157);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
