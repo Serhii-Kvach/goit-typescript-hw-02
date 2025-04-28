@@ -1,7 +1,12 @@
 import css from "./LoadMoreBtn.module.css";
 
-export default function LoadMoreBtn({ setPage, pageCount }) {
-  const handleClick = () => {
+type LoadMoreBtnProps = {
+  setPage: (count: number) => void;
+  pageCount: number;
+};
+
+export default function LoadMoreBtn({ setPage, pageCount }: LoadMoreBtnProps) {
+  const handleClick = (): void => {
     setPage(pageCount + 1);
   };
   return (

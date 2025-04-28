@@ -1,7 +1,13 @@
+import { Image } from "../../fetchApi";
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 
-export default function ImageGallery({ images, getImage }) {
+type ImageGalleryProps = {
+  images: Image[];
+  getImage: (img: Image) => void;
+};
+
+export default function ImageGallery({ images, getImage }: ImageGalleryProps) {
   return (
     <>
       <ul className={css.imageList}>

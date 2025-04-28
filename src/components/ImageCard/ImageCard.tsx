@@ -1,7 +1,13 @@
+import { Image } from "../../fetchApi";
 import css from "./ImageCard.module.css";
 
-export default function ImageCard({ image, getImages }) {
-  const handleClick = () => {
+type ImageCardProps = {
+  image: Image;
+  getImages: (img: Image) => void;
+};
+
+export default function ImageCard({ image, getImages }: ImageCardProps) {
+  const handleClick = (): void => {
     getImages(image);
   };
 
